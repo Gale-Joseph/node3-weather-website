@@ -1,4 +1,4 @@
-//console.log('Client side js is loaded')
+
 
 //we are practiciing getting the json data from our site that we normally get with a search. We are testing boston.
 
