@@ -8,6 +8,7 @@ const geocode  = require ('./utils/geocode')
 //non-core modules
 const express = require('express')
 const app = express()
+const port = process.env.PORT||3000
 const hbs = require('hbs')
 
 //use path.join for routing to index.html later on in app.use
@@ -102,6 +103,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000, ()=>{
-    console.log('Server is up on port 3000')
+app.listen(port, ()=>{
+    console.log('Server is up on port ' + port)
 })
