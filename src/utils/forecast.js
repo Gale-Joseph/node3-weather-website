@@ -7,7 +7,12 @@ const forecast = (latitude,longitude,callback)=>{
         } else if(body.error) {//res removed because destructured in response
             callback('Unable to find location',undefined)
         }else{
-            callback(undefined,'The weather is ' + body.current.weather_descriptions + ' and the temperature is ' + body.current.temperature + ' degrees.')
+            console.log(url)
+            callback(undefined,
+                'The weather is ' + body.current.weather_descriptions + '. ' + 
+                'The temperature is ' + body.current.temperature + ' degrees. ' + 
+                'It feels like ' + body.current.feelslike + ' degrees. ' + 
+                'The precipitation is ' + body.current.precip)
         }
     })
 
